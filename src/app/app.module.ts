@@ -17,6 +17,7 @@ import { MatListModule } from '@angular/material/list';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { Challenge1Component } from './components/challenges/challenge1/challenge1.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     HeaderComponent,
     HomeComponent,
     SidenavComponent,
+    Challenge1Component,
   ],
   imports: [
     BrowserModule,
