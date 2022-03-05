@@ -1,0 +1,24 @@
+{
+  "employees": [
+    {
+      "firstName": "Test",
+      "middleName": "",
+      "surname": "Test",
+      "secondSurname": "",
+      "birthCity": "armernia",
+      "gender": "male",
+      "birthDay": "2022-03-28T05:00:00.000Z",
+      "id": 1
+    },
+    {
+      "firstName": "Maria",
+      "middleName": "Paulina",
+      "surname": "Olaya",
+      "secondSurname": "Saldarriaga",
+      "birthCity": "medellin",
+      "gender": "not answer",
+      "birthDay": "1999-02-21T05:00:00.000Z",
+      "id": 2
+    }
+  ]
+}
