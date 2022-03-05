@@ -12,12 +12,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 // App Components
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { Challenge1Component } from './components/challenges/challenge1/challenge1.component';
+import { EmployeeFormComponent } from './components/challenges/challenge1/employee-form/employee-form.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +31,7 @@ import { Challenge1Component } from './components/challenges/challenge1/challeng
     HomeComponent,
     SidenavComponent,
     Challenge1Component,
+    EmployeeFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +44,10 @@ import { Challenge1Component } from './components/challenges/challenge1/challeng
     MatIconModule,
     MatDividerModule,
     MatListModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

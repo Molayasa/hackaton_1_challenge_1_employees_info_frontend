@@ -1,6 +1,21 @@
 <div class="container-fluid page">
   <div class="d-flex page__box p-3 mt-2">Challenge 1</div>
+  
   <div class="page__content shadow p-3 position-relative">
+    <mat-toolbar color="#1e293b">
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>assignment_ind</mat-icon>
+      </button>
+      <span class="challenge-name">Employee Information</span>
+      <span class="example-spacer"></span>
+      <button mat-raised-button color="warn" (click)="openDialog()">
+        Add Your Information
+      </button>
+    </mat-toolbar>
     <div class="page__content-data position-absolute text-center">
       Challenge1
     </div>
