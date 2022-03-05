@@ -1,20 +1,65 @@
 <h1 mat-dialog-title>Employee Form</h1>
 <div mat-dialog-content>
-  <mat-form-field appearance="outline" class="half-field-left">
-    <mat-label>First Name</mat-label>
-    <input matInput placeholder="Placeholder" />
-  </mat-form-field>
-  <mat-form-field appearance="outline" class="half-field-right">
-    <mat-label>Middle Name</mat-label>
-    <input matInput placeholder="Placeholder" />
-  </mat-form-field>
-  <mat-form-field appearance="outline" class="half-field-left">
-    <mat-label>Surname</mat-label>
-    <input matInput placeholder="Placeholder" />
-  </mat-form-field>
-  <mat-form-field appearance="outline" class="half-field-right">
-    <mat-label>Second Surname</mat-label>
-    <input matInput placeholder="Placeholder" />
-  </mat-form-field>
-  <app-selector placeholder="Select a City" [dropdownList]="cities"></app-selector>
+  <form [formGroup]="employeeForm">
+    <h2 mat-dialog-title>Full Name</h2>
+    <mat-form-field appearance="outline" class="half-field-left">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="Placeholder" formControlName="firstName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="half-field-right">
+      <mat-label>Middle Name</mat-label>
+      <input matInput placeholder="Placeholder" formControlName="middleName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="half-field-left">
+      <mat-label>Surname</mat-label>
+      <input matInput placeholder="Placeholder" formControlName="surname" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="half-field-right">
+      <mat-label>Second Surname</mat-label>
+      <input
+        matInput
+        placeholder="Placeholder"
+        formControlName="secondSurname"
+      />
+    </mat-form-field>
+
+    <h2 mat-dialog-title>Birth Information</h2>
+    <mat-form-field appearance="outline" class="half-field-left">
+      <mat-label>City of Birth</mat-label>
+      <mat-select formControlName="birthCity" placeholder="City of Birth">
+        <mat-option *ngFor="let city of cities" [value]="city">
+          {{ city.charAt(0).toUpperCase() + city.slice(1) }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="half-field-right">
+      <mat-label>Day of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="birthDay" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <h2 mat-dialog-title>Gender</h2>
+    <mat-radio-group aria-label="Gender" formControlName="gender">
+      <mat-radio-button value="female">Female</mat-radio-button>
+      <mat-radio-button value="male">Male</mat-radio-button>
+      <mat-radio-button value="not answer">Prefer not to say</mat-radio-button>
+    </mat-radio-group>
+  </form>
+</div>
+<div mat-dialog-action [align]="'right'">
+  <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  <button
+    style="margin-left: 8px"
+    mat-raised-button
+    color="primary"
+    mat-dialog-close
+    (click)="addEmployee()"
+  >
+    Save
+  </button>
 </div>

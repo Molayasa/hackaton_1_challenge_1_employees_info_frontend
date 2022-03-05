@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 // Material Modules
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -18,6 +19,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 // App Components
 import { HeaderComponent } from './components/header/header.component';
@@ -25,7 +29,6 @@ import { HomeComponent } from './components/home/home.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { Challenge1Component } from './components/challenges/challenge1/challenge1.component';
 import { EmployeeFormComponent } from './components/challenges/challenge1/employee-form/employee-form.component';
-import { SelectorComponent } from './components/selector/selector.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +38,15 @@ import { SelectorComponent } from './components/selector/selector.component';
     SidenavComponent,
     Challenge1Component,
     EmployeeFormComponent,
-    SelectorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    HttpClientModule,
     // * MATERIAL IMPORTS
     MatSidenavModule,
     MatToolbarModule,
@@ -54,6 +59,8 @@ import { SelectorComponent } from './components/selector/selector.component';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    MatRadioModule,
+    MatDatepickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
