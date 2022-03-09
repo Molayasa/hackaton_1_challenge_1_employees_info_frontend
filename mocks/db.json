@@ -19,6 +19,26 @@
       "gender": "not answer",
       "birthDay": "1999-02-21T05:00:00.000Z",
       "id": 2
+    },
+    {
+      "firstName": "Zoe",
+      "middleName": "",
+      "surname": "Olaya",
+      "secondSurname": "Saldarriaga",
+      "birthCity": "medellín",
+      "gender": "female",
+      "birthDay": "2019-01-07T05:00:00.000Z",
+      "id": 3
+    },
+    {
+      "firstName": "Gustavo",
+      "middleName": "",
+      "surname": "Navarro",
+      "secondSurname": "",
+      "birthCity": "barranquilla",
+      "gender": "male",
+      "birthDay": "1989-02-21T05:00:00.000Z",
+      "id": 4
     }
   ]
 }

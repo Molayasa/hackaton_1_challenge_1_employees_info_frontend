@@ -22,6 +22,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 // App Components
 import { HeaderComponent } from './components/header/header.component';
@@ -61,6 +64,9 @@ import { EmployeeFormComponent } from './components/challenges/challenge1/employ
     MatSelectModule,
     MatRadioModule,
     MatDatepickerModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

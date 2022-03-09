@@ -1,6 +1,6 @@
 .page {
   color: white;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   background: #f1f5f9;
   &__box {
     min-height: 120px;
@@ -16,9 +16,9 @@
     color: black;
     font-size: 2rem;
     &-data {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      margin: -90px auto 0;
+      padding: 0 15px;
+      width: 100%;
     }
   }
 }
